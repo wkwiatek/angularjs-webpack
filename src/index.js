@@ -1,2 +1,2 @@
-/// Wstawiamy proste 'Hello World'
-document.getElementById('root').innerText = 'Hello!'
+/// Importowanie jak w NodeJS/CommonJS
+document.getElementById('root').innerText = require('./app/app')
