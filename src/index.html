@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <title>AngularJS Webpack</title>
 </head>
-<!-- Dodajemy aplikację do elementu body wraz ze strict di mode-->
 <body ng-app="app" ng-strict-di ng-cloak>
+
+  <div ng-controller="AppController as vm">
+    {{ vm.hello }}
+  </div>
+
   <script src="bundle.js"></script>
+
 </body>
 </html>
