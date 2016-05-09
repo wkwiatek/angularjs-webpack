@@ -7,7 +7,13 @@
 <body ng-app="app" ng-strict-di ng-cloak>
 
   <div ng-controller="AppController as vm">
-    {{ vm.hello }}
+    <h1>Shopping list</h1>
+    <ul>
+      <!-- Prosty i częsty przykład w aplikacjach Angularowych -->
+      <li ng-repeat="product in vm.products">
+        {{ product.name }} - {{ product.price | currency }}
+      </li>
+    </ul>
   </div>
 
   <script src="bundle.js"></script>

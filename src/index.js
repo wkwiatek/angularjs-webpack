@@ -1,7 +1,6 @@
 import angular from 'angular'
-import { AppController } from './app/app'
+import { AppController } from './app/app.controller'
 
-//3/ Tworzymy pierwszy kontroler
 angular
 	.module('app', [])
 	.controller('AppController', AppController)
