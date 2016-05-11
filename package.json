@@ -4,7 +4,8 @@
   "description": "AngularJS Webpack",
   "scripts": {
     "build": "WEBPACK_ENV=production webpack --progress --hide-modules",
-    "dev": "webpack-dev-server --content-base ./src --progress --history-api-fallback --open"
+    "dev": "webpack-dev-server --content-base ./src --progress --history-api-fallback --open",
+    "postinstall": "typings install"
   },
   "author": "",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "stylus-loader": "^2.0.0",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
+    "typings": "^0.8.1",
     "webpack": "^2.1.0-beta.7",
     "webpack-dev-server": "^2.0.0-beta"
   },
