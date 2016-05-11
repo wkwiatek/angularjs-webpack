@@ -6,5 +6,6 @@ import { AppService } from './app/app.service'
 
 angular
   .module('app', [])
-  .controller('AppController', ['AppService', AppController])
+  /// ng-annotate zrobi poprawne wstrzykiwanie za nas
+  .controller('AppController', AppController)
   .service('AppService', AppService)
