@@ -1,6 +1,7 @@
-//7/ Zmieńmy funkcje na klasy 
+import { IProduct } from './product.interface'
+
 export class AppController {
-  public products: any[]
+  public products: IProduct[]
 
   constructor(AppService: any) {
     this.products = AppService.products
