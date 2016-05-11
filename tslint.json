@@ -15,7 +15,7 @@
     ],
     "class-name": true,
     "comment-format": [
-      true,
+      false,
       "check-space",
       "check-lowercase"
     ],
@@ -152,6 +152,7 @@
       true,
       "check-format",
       "allow-leading-underscore",
+      "allow-pascal-case",
       "ban-keywords"
     ],
     "whitespace": [

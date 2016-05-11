@@ -15,7 +15,6 @@ const config = {
 		extensions: ['', '.js', '.ts', '.json']
 	},
 	module: {
-		//3/ Linter wyląduje w preloaderach
 		preLoaders: [
 			{ test: /\.ts$/, loaders: ['tslint'], exclude: /node_modules/ },
 		],
