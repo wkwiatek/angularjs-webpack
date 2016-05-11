@@ -1,8 +1,8 @@
 const webpack = require('webpack')
 const path = require('path')
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const isProdEnv = process.env.WEBPACK_ENV === 'production';
+const isProdEnv = process.env.WEBPACK_ENV === 'production'
 
 const config = {
 	devtool: 'source-map',
@@ -11,13 +11,15 @@ const config = {
 		path: path.resolve(__dirname, './dist'),
 		filename: 'bundle.js',
 	},
-	//3/ Webpack może domyślnie łapać rozszerzenia
 	resolve: {
 		extensions: ['', '.js', '.ts', '.json']
 	},
 	module: {
+		//3/ Linter wyląduje w preloaderach
+		preLoaders: [
+			{ test: /\.ts$/, loaders: ['tslint'], exclude: /node_modules/ },
+		],
 		loaders: [
-			/// Ale musimy dodać customowy loader
 			{ test: /\.ts$/, loaders: ['ts'], exclude: /node_modules/ },
 			{ test: /\.styl$/, loaders: ['style', 'css', 'stylus'] },
 		],

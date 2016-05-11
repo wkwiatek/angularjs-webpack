@@ -5,6 +5,6 @@ npm install angular --save
 npm install css-loader style-loader stylus-loader stylus --save-dev
 npm i copy-webpack-plugin --save-dev
 npm i typescript ts-loader --save-dev
-# Dzięki typings możemy instalować customowe typy do bibliotek
 npm i typings --save-dev
 typings install angular --save --ambient
+npm i tslint tslint-loader --save-dev
