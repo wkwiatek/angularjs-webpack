@@ -9,4 +9,4 @@ npm i typings --save-dev
 typings install angular --save --ambient
 npm i tslint tslint-loader --save-dev
 # ng-annotate trzeba też zainstalować jako loader
-npm i ng-annotate-loader --save-dev
+npm i ng-annotate ng-annotate-loader --save-dev
