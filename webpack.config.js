@@ -20,7 +20,8 @@ const config = {
 		],
 		loaders: [
 			{ test: /\.ts$/, loaders: ['ng-annotate', 'ts'], exclude: /node_modules/ },
-			{ test: /\.styl$/, loaders: ['style', 'css', 'stylus'] },
+      /// Potrzebne jest dodatkowe query do loadera css
+			{ test: /\.styl$/, loaders: ['style', 'css?modules', 'stylus'] },
 		],
 	},
 	plugins: isProdEnv ? [
