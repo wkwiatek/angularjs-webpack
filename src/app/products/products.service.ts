@@ -1,6 +1,6 @@
-import { IProduct } from './product.interface'
+import { IProduct } from './product.interface.ts'
 
-export class AppService {
+export class ProductsService {
   public products: IProduct[] = [
     { name: 'Milk', price: 1.05 },
     { name: 'Salami', price: 2.5 },
