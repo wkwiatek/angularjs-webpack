@@ -2,7 +2,7 @@ import IModule = angular.IModule
 import { ProductsModule } from './products/products'
 import { AppComponent } from './app.component'
 
-import '@angular/router/angular1/angular_1_router'
+import '../vendor/angular_1_router'
 
 export const ComponentsModule: IModule = angular
   .module('app.components', [

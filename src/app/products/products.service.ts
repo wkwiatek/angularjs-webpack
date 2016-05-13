@@ -1,3 +1,4 @@
+//9/ Serwis pozostaje bez zmian!
 import { IProduct } from './product.interface.ts'
 
 export class ProductsService {

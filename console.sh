@@ -13,6 +13,5 @@ typings install node --ambient --save
 npm i @angular/router@^0.2.0 --save
 npm i angular-mocks jasmine-core karma karma-jasmine karma-phantomjs-launcher karma-sourcemap-loader karma-spec-reporter karma-webpack phantomjs-prebuilt --save-dev
 typings install angular-mocks jasmine --save --ambient
-# instalacja Angulara 2
 npm i @angular/upgrade @angular/core @angular/compiler @angular/common @angular/platform-browser @angular/platform-browser-dynamic @angular/router rxjs@5.0.0-beta.6 zone.js@0.6.12 reflect-metadata --save
 typings install es6-shim --save --ambient

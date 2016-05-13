@@ -5,7 +5,8 @@
 		"target": "ES5",
 		"module": "commonjs",
 		"sourceMap": true,
-		"noImplicitAny": true
+		"noImplicitAny": true,
+    "experimentalDecorators": true
 	},
 	"exclude": [
 		"node_modules",
