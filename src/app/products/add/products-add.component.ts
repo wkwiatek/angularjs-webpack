@@ -2,19 +2,30 @@ import IComponentOptions = angular.IComponentOptions
 import { IProduct } from '../product.interface'
 
 export const ProductsAddComponent: IComponentOptions = {
+  //3/ Przekazujemy $router do komponentu
   bindings: {
-    onProductAdded: '&',
+    $router: '<',
   },
   controller: class {
     public newProduct: IProduct
     public onProductAdded: Function
+    public $router: any
 
-    public onSubmit(product: IProduct): void {
-      this.onProductAdded(product)
+    //3/ private w konstruktorze binduje od razu do this
+    constructor(private Products: any) {
+      'ngInject';
+    }
+
+    /// Wykorzystamy destructing assignment ale silnie typowane
+    public onSubmit({ newProduct }: { newProduct: IProduct }): void {
+      /// Odwołujemy się bezpośrednio do serwisu teraz
+      this.Products.products.push(newProduct)
       this.newProduct = {
         name: '',
         price: undefined,
       }
+      /// Możemy też zrobić routing z poziomu komponentu
+      this.$router.navigate(['ProductsMain']);
     }
   },
   template: `

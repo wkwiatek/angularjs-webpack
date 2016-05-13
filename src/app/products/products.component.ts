@@ -1,8 +1,19 @@
 const { listElement } = require('./products.styl') // tslint:disable-line
-import IComponentOptions = angular.IComponentOptions;
+import { IComponentOptionsRouter } from '../shared/interfaces/component-options-router.interface'
 import { IProduct } from './product.interface'
 
-export const ProductsComponent: IComponentOptions = {
+export const ProductsComponent: IComponentOptionsRouter = {
+  //11/ Konfiguracja routera ląduje też w ProductsComponent
+  $routeConfig: [{
+    component: 'productsMain',
+    name: 'ProductsMain',
+    path: '/',
+    useAsDefault: true,
+  }, {
+    component: 'productsAdd',
+    name: 'ProductsAdd',
+    path: '/add',
+  }],
   controller: class {
     public products: IProduct[]
 
@@ -10,10 +21,6 @@ export const ProductsComponent: IComponentOptions = {
       'ngInject';
 
       this.products = Products.products
-    }
-
-    public addProduct(newProduct: IProduct): void {
-      this.products.push(newProduct)
     }
   },
   template: `
@@ -24,9 +31,8 @@ export const ProductsComponent: IComponentOptions = {
           {{ product.name }} - {{ product.price | currency }}
         </li>
       </ul>
-      <products-add
-        on-product-added="$ctrl.addProduct(newProduct)"
-      ></products-add>
+      <!-- Zamiast jawnego wywołania komponentu dodajemy dyrektywę routera -->
+      <ng-outlet></ng-outlet>
     </div>
   `,
 }
