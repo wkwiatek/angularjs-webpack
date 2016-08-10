@@ -5,9 +5,9 @@
   "scripts": {
     //4/ Budowanie wygląda następująco:
     "build": "WEBPACK_ENV=production webpack --progress --hide-modules",
-    "buildWin": "set WEBPACK_ENV=production; webpack --progress --hide-modules",
+    "buildWin": "set WEBPACK_ENV=production&& webpack --progress --hide-modules",
     "dev": "webpack-dev-server --content-base ./src --progress --history-api-fallback --open",
-    "devWin": "set WEBPACK_ENV=dev; webpack-dev-server --content-base ./src --progress --history-api-fallback --open"
+    "devWin": "set WEBPACK_ENV=dev&& webpack-dev-server --content-base ./src --progress --history-api-fallback --open"
   },
   "author": "",
   "license": "MIT",
