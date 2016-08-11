@@ -1,6 +1,6 @@
 import IComponentOptions = angular.IComponentOptions
 import {IProduct} from "./products/product.interface";
-import {ProductsService} from "./products/fetchedProducts.service";
+import {ProductsService} from "./products/products.service";
 
 
 export const AppComponent: IComponentOptions = {
@@ -14,5 +14,5 @@ export const AppComponent: IComponentOptions = {
     }
   },
   /// Przekazujemy dane do komponentu poprzez atrybuty
-  template: `<products products="fetchedProducts"></products>`,
+  template: `<products products="$ctrl.fetchedProducts"></products>`,
 }
