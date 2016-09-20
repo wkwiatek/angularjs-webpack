@@ -7,6 +7,6 @@ export class AppController {
   constructor(AppService: any) {
     'ngInject';
     
-    this.products = AppService.products
+    this.products = AppService.fetchedProducts
   }
 }

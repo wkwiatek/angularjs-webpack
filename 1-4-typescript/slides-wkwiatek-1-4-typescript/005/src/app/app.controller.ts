@@ -4,6 +4,6 @@ export class AppController {
   public products: IProduct[]
 
   constructor(AppService: any) {
-    this.products = AppService.products
+    this.products = AppService.fetchedProducts
   }
 }

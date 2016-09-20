@@ -7,4 +7,5 @@ npm i copy-webpack-plugin --save-dev
 npm i typescript ts-loader --save-dev
 npm i typings --save-dev
 typings install angular --save --ambient
+# Instalujemy tslint, jego konfiguracja znajduje się w pliku tslint.json
 npm i tslint tslint-loader --save-dev

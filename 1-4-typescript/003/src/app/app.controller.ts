@@ -1,5 +1,5 @@
 export function AppController(AppService: any) {
-	const vm = this
+	const vm = this;
 	
-	vm.products = AppService.products 
+	vm.products = AppService.products;
 }
