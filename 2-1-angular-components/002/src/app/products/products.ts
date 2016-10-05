@@ -2,7 +2,7 @@ import IModule = angular.IModule
 import { ProductsComponent } from './products.component'
 import { ProductsService } from './products.service'
 
-//4/ Do modułu products przekazujemy teraz odpowiednie części
+//4/ We're adding whole products stuff to products module
 export const ProductsModule: IModule = angular
   .module('app.components.products', [])
   .component('products', ProductsComponent)

@@ -1,5 +1,5 @@
 npm init
-# Instalujemy webpacka
+# install webpack
 npm install webpack@^2.1.0-beta --save-dev
-# ... oraz webpack-dev-server
+# ... and webpack-dev-server
 npm install webpack-dev-server@^2.0.0-beta --save-dev

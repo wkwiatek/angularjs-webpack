@@ -1,2 +1,2 @@
-/// Importowanie jak w NodeJS/CommonJS
-document.getElementById('root').innerText = require('./app/app')
+/// Imports like with NodeJS/CommonJS
+document.getElementById('root').innerText = require('./app/app');

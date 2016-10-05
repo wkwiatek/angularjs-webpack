@@ -1,7 +1,7 @@
 import './index.styl'
 
 import * as angular from 'angular'
-//6/ Importujemy wszystkie komponenty do aplikacji głównej 
+//6/ Let's import components module and register it as a dependency
 import { ComponentsModule } from './app/app'
 
 angular

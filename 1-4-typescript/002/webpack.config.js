@@ -11,13 +11,13 @@ const config = {
 		path: path.resolve(__dirname, './dist'),
 		filename: 'bundle.js',
 	},
-	//3/ Webpack może domyślnie łapać rozszerzenia
+	//3/ If we add extension here then we don't have to specify it in import
 	resolve: {
 		extensions: ['', '.js', '.ts', '.json']
 	},
 	module: {
 		loaders: [
-			/// Ale musimy dodać customowy loader
+			/// But still - we have to add proper loader
 			{ test: /\.ts$/, loaders: ['ts'], exclude: /node_modules/ },
 			{ test: /\.styl$/, loaders: ['style', 'css', 'stylus'] },
 		],

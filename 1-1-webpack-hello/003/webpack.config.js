@@ -1,11 +1,11 @@
-/// Używamy node'a w wersji 6, więc możemy korzystać z dobrodziejstw ES2015
+/// We use NodeJS 6th version, so we can use all of ES2015 stuff
 const config = {
-	/// Na początek potrzebujemy plik wejściowy
+	/// At beginning we set entrypoint to our build
 	entry: './src/index',
-	//3/ Oraz wynikowy
+	//3/ And then name of bundled code
 	output: {
 		filename: 'bundle.js',
-	},
-}
+	}
+};
 
-module.exports = config
+module.exports = config;

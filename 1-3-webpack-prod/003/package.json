@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "AngularJS Webpack",
   "scripts": {
-    //4/ Budowanie wygląda następująco:
+    //4/ Building command looks as below:
     "build": "WEBPACK_ENV=production webpack --progress --hide-modules",
     "buildWin": "set WEBPACK_ENV=production&& webpack --progress --hide-modules",
     "dev": "webpack-dev-server --content-base ./src --progress --history-api-fallback --open",

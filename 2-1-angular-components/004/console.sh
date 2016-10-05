@@ -9,5 +9,5 @@ npm i typings --save-dev
 typings install angular --save --ambient
 npm i tslint tslint-loader --save-dev
 npm i ng-annotate ng-annotate-loader --save-dev
-# doinstalujemy typingi node'a (require)
+# We need to install node.js typings for using require function
 typings install node --ambient --save

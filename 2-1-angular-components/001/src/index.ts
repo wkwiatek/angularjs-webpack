@@ -1,12 +1,12 @@
 import './index.styl'
 
 import * as angular from 'angular'
-/// Importujemy nowy komponent
+/// Importing new component
 import { AppComponent } from './app/app.component'
 import { AppService } from './app/app.service'
 
 angular
   .module('app', [])
-  /// Używamy go pod nazwą 'app'
+  /// And register it as an 'app'
   .component('app', AppComponent)
   .service('AppService', AppService)

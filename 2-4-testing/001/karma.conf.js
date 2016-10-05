@@ -1,3 +1,4 @@
+///33 Simple karma configuration
 module.exports = config => {
   config.set({
     frameworks: [

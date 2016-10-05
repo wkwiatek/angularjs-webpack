@@ -1,4 +1,4 @@
-//9/ Przerzućmy jeszcze dane do serwisu
+//9/ Let's move data into service
 export function AppService() {
 	return {
 		products: [

@@ -1,4 +1,4 @@
-//7/ Na razie typy zostawiamy explicit jako any
+//7/ And make typings very generic
 export class AppService {
   public products: any[] = [
     { name: 'Milk', price: 1.05 },

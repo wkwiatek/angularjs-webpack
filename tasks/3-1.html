@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Zadania &ndash; warstwa serwisów</title>
+    <title>Tasks - service layer</title>
     <script src="https://xpla.org/static/js/slide_loader.3.0.0.js"></script>
 </head>
 <body class="xp-slide">
 
 <div class="xp-row center" style="height: 100%">
     <xp-timer>45</xp-timer>
-    <h1>Warstwa serwisów</h1>
+    <h1>Service layer</h1>
     <ol class="xp-tasks">
-        <li>Zaimplementuj sortowanie i filtrowanie w oparciu o serwis - repozytorium produktów. Repozytorium powinno być jedynym źródłem danych o produktach.</li>
-        <li class="additional">Utwórz serwis do pobierania adresu obrazka dla produktu.</li>
-        <li class="additional">Dodaj konfigurację do serwisu do pobierania adresu obrazków - w zależności od konfiguracji obrazki powinny być ładowane z różnych serwerów</li>
+        <li>Implement sorting and filtering using service - product repository. The repository should be the only source of truth about products in whole application.</li>
+        <li class="additional">Create a service for getting URL of product's image.</li>
+        <li class="additional">Add a configuration to images service. Basing on configuration that service should create different URL's (for example pointing to bigger images on Retina screens).</li>
     </ol>
 </div>
 </body>

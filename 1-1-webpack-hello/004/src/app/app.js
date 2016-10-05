@@ -1,2 +1,2 @@
-/// Exporty możemy robić w stylue NodeJS/CommonJS
-module.exports = 'Hello from the module!'
+/// We can make exports in CommonJS way
+module.exports = 'Hello from the module!';

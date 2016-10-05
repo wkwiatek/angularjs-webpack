@@ -32,16 +32,16 @@
 <div class="xp-resize-row"></div>
 <div class="xp-row comments">
     <xp-annotations>
-        <header><h1>Warstwa serwisów</h1></header>
+        <header><h1>Service layer</h1></header>
         <details>
-            <p>Praktycznie cała logika aplikacji powinna znaleźć się w warstwie serwisów. Dlatego w AngularJS mamy aż 4 sposoby zdefiniowania nowych serwisów:</p>
+            <p>In practice almost whole application logic should live in service layer. That's why AngularJS creators give us 4 ways to do it:</p>
             <ul>
                 <li>service</li>
                 <li>factory</li>
                 <li>provider</li>
                 <li>value/constant</li>
             </ul>
-            <p>Te utworzone za pomocą metody <code>.service</code> są powoływane do życia z wykorzystaniem słowa kluczowego <code>new</code> i w ten sposób otrzymany obiekt jest wstrzykiwany do innych serwisów</p>
+            <p>These ones created with <code>service</code> method are created using <code>new</code> keyword. And such created instance (always the same!) is injected into other parts of application.</p>
         </details>
     </xp-annotations>
 </div>

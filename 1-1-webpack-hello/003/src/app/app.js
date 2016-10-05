@@ -1,2 +1,2 @@
-/// Preferowane są jednak eksporty ES2015
-export const hello = 'Hello from the module!'
+/// ES2015 import/export syntax is the preferred one
+export const hello = 'Hello from the module!';

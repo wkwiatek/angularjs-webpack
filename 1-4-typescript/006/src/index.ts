@@ -6,6 +6,6 @@ import { AppService } from './app/app.service'
 
 angular
   .module('app', [])
-  /// A my nie musimy dodatkowo tutaj definiować zależności
+  /// And we don't have to declare dependencies
   .controller('AppController', AppController)
   .service('AppService', AppService)

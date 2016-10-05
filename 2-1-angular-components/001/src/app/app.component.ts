@@ -1,10 +1,10 @@
 import { IProduct } from './product.interface'
-/// Dostajemy interfejsy do Angulara 1.5 dzięki typings
+/// Thanks to typings we can use interfaces from Angular
 import IComponentOptions = angular.IComponentOptions;
 
-/// Ustalenie typu pozwoli nam uniknąć błedów w strukturze obiektu
+/// And using that interface helps us to properly configure the component
 export const AppComponent: IComponentOptions = {
-  //10/ Contoller i widok są teraz obok siebie
+  //10/ Now controller and template are next to each other
   controller: class {
     public products: IProduct[]
 
@@ -18,7 +18,7 @@ export const AppComponent: IComponentOptions = {
     <div>
       <h1>Shopping list</h1>
       <ul>
-        <!-- Używamy teraz $ctrl zamiast vm -->
+        <!-- Now we're using $ctrl instead of vm -->
         <li ng-repeat="product in $ctrl.products">
           {{ product.name }} - {{ product.price | currency }}
         </li>

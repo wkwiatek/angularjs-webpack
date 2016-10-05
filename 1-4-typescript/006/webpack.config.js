@@ -19,7 +19,7 @@ const config = {
             {test: /\.ts$/, loaders: ['tslint'], exclude: /node_modules/},
         ],
         loaders: [
-            /// dodanie ng-annotate do loaderów
+            /// We add it to loaders
             {test: /\.ts$/, loaders: ['ng-annotate', 'ts'], exclude: /node_modules/},
             {test: /\.styl$/, loaders: ['style', 'css', 'stylus']},
         ],
