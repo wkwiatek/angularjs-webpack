@@ -1,3 +1,5 @@
+import * as angular from 'angular';
+
 import IModule = angular.IModule
 import { ProductsComponent } from './products.component'
 import { ProductsService } from './products.service'
