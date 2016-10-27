@@ -11,11 +11,12 @@ export class ProductsProvider implements IServiceProvider {
         this.doubleProducts = true;
     }
 
-    public $get = ['productsService', (productsService: ProductsService) => {
+    public $get (productsService: ProductsService) {
+        'ngInject';
         if (this.doubleProducts) {
             return productsService.getProducts().concat(productsService.getProducts());
         } else {
             return productsService.getProducts();
         }
-    }];
+    }
 }
