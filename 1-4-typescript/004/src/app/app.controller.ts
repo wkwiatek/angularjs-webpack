@@ -1,4 +1,4 @@
-//7/ Zmieńmy funkcje na klasy 
+//7/ Let's use classes
 export class AppController {
   public products: any[]
 

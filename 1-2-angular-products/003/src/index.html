@@ -9,7 +9,7 @@
   <div ng-controller="AppController as vm">
     <h1>Shopping list</h1>
     <ul>
-      <!-- Prosty i częsty przykład w aplikacjach Angularowych -->
+      <!-- That's simple and very common in ng apps -->
       <li ng-repeat="product in vm.products">
         {{ product.name }} - {{ product.price | currency }}
       </li>

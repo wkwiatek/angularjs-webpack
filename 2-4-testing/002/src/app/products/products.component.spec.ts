@@ -1,16 +1,16 @@
-/// importujemy moduł
+/// importing tested module
 import './products'
 
 describe('Module: Products', () => {
 
   describe('Controller: ProductsComponent', () => {
 
-    /// wstrzykujemy go do
+    /// preparing module to use in test
     beforeEach(angular.mock.module('app.components.products'))
 
-    /// wstrzykiwanie kontrolera komponentu
+    /// injecting component controller factory
     beforeEach(angular.mock.inject(($componentController: any) => {
-      //5/ mockowanie zależności kontrolera
+      //5/ getting component controller instance and mocking it's dependencies
       this.$ctrl = $componentController('products', {
         Products: {
           products: [{ name: 'asd', price: 0 }],

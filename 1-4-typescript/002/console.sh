@@ -5,6 +5,6 @@ npm install angular --save
 npm install css-loader style-loader stylus-loader stylus --save-dev
 npm i copy-webpack-plugin --save-dev
 npm i typescript ts-loader --save-dev
-#2/ Dzięki typings możemy instalować customowe typy do bibliotek, konfiguracja jest w pliku typings.json
+#2/ Thanks to typings we can install typings for angular and save references in typings.json file
 npm i typings --save-dev
 typings install dt~angular dt~jquery --save --global

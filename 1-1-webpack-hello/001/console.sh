@@ -1,2 +1,2 @@
-# Do startu projektu wymagany jest NodeJS
+# NodeJS is required to start project
 npm init

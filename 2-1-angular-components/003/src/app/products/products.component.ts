@@ -3,7 +3,7 @@ import IComponentOptions = angular.IComponentOptions;
 
 
 export const ProductsComponent: IComponentOptions = {
-  //3/ Odbieramy je poprzez zdefiniowanie "bindings"
+  //3/ We can receive data in component by declaring bindings
   bindings: {
     products: '<'
   },

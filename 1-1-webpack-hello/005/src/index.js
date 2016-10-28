@@ -1,4 +1,4 @@
-//3/ Webpack 2 rozumie też importy ES2015
-import { hello } from './app/app'
+//3/ Webpack 2 properly resolves ES2015 module syntax
+import { hello } from './app/app';
 
-document.getElementById('root').innerText = hello
+document.getElementById('root').innerText = hello;

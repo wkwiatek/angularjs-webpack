@@ -8,5 +8,5 @@ npm i typescript ts-loader --save-dev
 npm i typings --save-dev
 typings install angular --save --ambient
 npm i tslint tslint-loader --save-dev
-# Przyda się jeszcze ng-annotate
+# ng-annotate will be very useful
 npm i ng-annotate ng-annotate-loader --save-dev

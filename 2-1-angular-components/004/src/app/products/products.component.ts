@@ -1,4 +1,4 @@
-/// Import webpacka z pominieciem TypeScriptu
+/// There we're using raw webpack import instead a TypeScript one
 const { listElement } = require('./products.styl') // tslint:disable-line
 import { IProduct } from './product.interface'
 import IComponentOptions = angular.IComponentOptions;
@@ -13,7 +13,7 @@ export const ProductsComponent: IComponentOptions = {
       this.products = Products.products
     }
   },
-  //7/ Template używa teraz customowej nazwy klasy
+  //7/ And custom class name in template
   template: `
     <div>
       <h1>Shopping list</h1>

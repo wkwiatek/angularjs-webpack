@@ -13,6 +13,6 @@ export const AppComponent: IComponentOptions = {
       this.fetchedProducts = Products.products;
     }
   },
-  /// Przekazujemy dane do komponentu poprzez atrybuty
+  /// We passing data to component using attributes
   template: `<products products="$ctrl.fetchedProducts"></products>`,
 }

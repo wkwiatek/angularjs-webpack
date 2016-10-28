@@ -1,7 +1,7 @@
 import { IProduct } from './product.interface'
 import IComponentOptions = angular.IComponentOptions;
 
-//21/ Cała logika i widok jest teraz w ProductsComponent
+//21/ Whole logic and view are now in ProductsComponent
 export const ProductsComponent: IComponentOptions = {
   controller: class {
     public products: IProduct[];

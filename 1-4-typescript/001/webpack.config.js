@@ -1,11 +1,11 @@
-const webpack = require('webpack')
-const path = require('path')
+const webpack = require('webpack');
+const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProdEnv = process.env.WEBPACK_ENV === 'production';
 
 const config = {
-	/// dodamy sourcemapy do łatwiejszego debugowania
+	/// Sourcemaps are very useful for debugging purposes
 	devtool: 'source-map',
 	entry: './src/index',
 	output: {
