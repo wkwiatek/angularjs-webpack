@@ -18,7 +18,7 @@
     "tslint": "^3.10.1",
     "tslint-loader": "^2.1.4",
     "typescript": "^2.0.3",
-        "webpack": "2.1.0-beta.22 ",
+    "webpack": "2.1.0-beta.22",
     "webpack-dev-server": "2.1.0-beta.9"
   },
   "dependencies": {
