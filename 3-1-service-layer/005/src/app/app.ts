@@ -10,7 +10,7 @@ angular.module('app', [])
     .service('productsService', ProductsService)
     .provider('products', ProductsProvider)
     .constant('ENABLE_DOUBLING', true)
-    //2/ Finally we can use 'ngInject' directive to tell ngAnnotate to create explicit declarations
+    //2/ Finally we can use 'ngInject' directive to tell ngAnnotate to create explicit declarations.
     .config((productsProvider: ProductsProvider, ENABLE_DOUBLING: boolean) => {
         'ngInject';
         if (ENABLE_DOUBLING) {

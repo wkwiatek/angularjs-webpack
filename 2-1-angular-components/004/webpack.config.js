@@ -19,7 +19,7 @@ const config = {
 			{ test: /\.ts$/, loaders: ['tslint'], exclude: /node_modules/ },
 		],
 		loaders: [
-			{ test: /\.ts$/, loaders: ['ng-annotate', 'ts'], exclude: /node_modules/ },
+			{ test: /\.ts$/, loaders: ['ts'], exclude: /node_modules/ },
       /// An additional query is needed for css loader
 			{ test: /\.styl$/, loaders: ['style', 'css?modules', 'stylus'] },
 		],
