@@ -21,5 +21,5 @@ export const ProductsComponent: IComponentOptions = {
         </li>
       </ul>
     </div>
-  `,
-}
+  `
+};
