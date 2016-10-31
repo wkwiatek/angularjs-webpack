@@ -1,20 +1,15 @@
-const webpack = require('webpack');
-const express = require('express');
-const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const isProdEnv = process.env.WEBPACK_ENV === 'production';
+const isProdEnv = process.env.WEBPACK_ENV === 'production'
 
 const config = {
   devtool: 'source-map',
-  //4/ We need to add another entry containing specs
-  entry: {
-    bundle: './src/index',
-    spec: './src/tests.webpack'
-  },
+  entry: './src/index',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].js',
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['', '.js', '.ts', '.json']
@@ -32,12 +27,6 @@ const config = {
     new webpack.optimize.UglifyJsPlugin(),
     new CopyWebpackPlugin([{ from: './src/index.html', to: 'index.html' }])
   ] : [],
-  //5/ And configure jasmine to be served by webpack-dev-server
-  devServer: {
-    setup: function (app) {
-      app.use('/jasmine', express.static('node_modules/jasmine-core/lib/jasmine-core/'));
-    }
-  }
-};
+}
 
-module.exports = config;
+module.exports = config

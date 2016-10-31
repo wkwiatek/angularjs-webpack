@@ -11,6 +11,6 @@ npm i tslint tslint-loader --save-dev
 npm i ng-annotate ng-annotate-loader --save-dev
 typings install node --ambient --save
 npm i @angular/router@^0.2.0 --save
-#/2 we need to install a lot of things here
-npm i angular-mocks jasmine-core karma karma-jasmine karma-phantomjs-launcher karma-sourcemap-loader karma-spec-reporter karma-webpack phantomjs-prebuilt --save-dev
+#2/ we need to install jasmine and angular testing helper
+npm install angular-mocks jasmine-core --save-dev
 typings install angular-mocks jasmine --save --ambient
