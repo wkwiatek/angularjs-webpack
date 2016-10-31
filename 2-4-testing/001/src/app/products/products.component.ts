@@ -1,6 +1,7 @@
-const { listElement } = require('./products.styl') // tslint:disable-line
 import { IComponentOptionsRouter } from '../shared/interfaces/component-options-router.interface'
 import { IProduct } from './product.interface'
+
+import './products.styl';
 
 export const ProductsComponent: IComponentOptionsRouter = {
   $routeConfig: [{
@@ -26,7 +27,7 @@ export const ProductsComponent: IComponentOptionsRouter = {
     <div>
       <h1>Shopping list</h1>
       <ul>
-        <li ng-repeat="product in $ctrl.products" class="${listElement}">
+        <li ng-repeat="product in $ctrl.products" class="listElement">
           {{ product.name }} - {{ product.price | currency }}
         </li>
       </ul>
