@@ -1,12 +1,6 @@
-import { IComponentOptionsRouter } from './shared/interfaces/component-options-router.interface'
+import IComponentOptions = angular.IComponentOptions;
 
-export const AppComponent: IComponentOptionsRouter = {
-  $routeConfig: [{
-    component: 'products',
-    name: 'Products',
-    path: 'products/...',
-    useAsDefault: true,
-  }],
+export const AppComponent: IComponentOptions = {
   controller: class {},
-  template: `<ng-outlet></ng-outlet>`,
-}
+  template: `<ng-outlet></ng-outlet>`
+};

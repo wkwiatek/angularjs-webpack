@@ -5,12 +5,15 @@
   "scripts": {
     "build": "WEBPACK_ENV=production webpack --progress --hide-modules",
     "dev": "webpack-dev-server --content-base ./src --progress --history-api-fallback --open",
-    "postinstall": "typings install",
+    // That entry allows us to run tests in commandline using Karma
     "test": "karma start"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/angular": "^1.5.17",
+    "@types/angular-mocks": "^1.5.5",
+    "@types/jasmine": "^2.5.36",
     "angular-mocks": "^1.5.5",
     "copy-webpack-plugin": "^2.1.3",
     "css-loader": "^0.23.1",
@@ -30,8 +33,7 @@
     "ts-loader": "^0.8.2",
     "tslint": "^3.10.1",
     "tslint-loader": "^2.1.4",
-    "typescript": "^1.8.10",
-    "typings": "^1.3.2",
+    "typescript": "^2.0.3",
     "webpack": "2.1.0-beta.22",
     "webpack-dev-server": "2.1.0-beta.9"
   },

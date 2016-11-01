@@ -1,15 +1,17 @@
-const webpack = require('webpack')
-const path = require('path')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const webpack = require('webpack');
+const express = require('express');
+const path = require('path');
 
-const isProdEnv = process.env.WEBPACK_ENV === 'production'
 
 const config = {
   devtool: 'source-map',
-  entry: './src/index',
+  entry: {
+    bundle: './src/index',
+    spec: './src/tests.webpack'
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   resolve: {
     extensions: ['', '.js', '.ts', '.json']
@@ -23,10 +25,11 @@ const config = {
       { test: /\.styl$/, loaders: ['style', 'css?modules', 'stylus'] },
     ],
   },
-  plugins: isProdEnv ? [
-    new webpack.optimize.UglifyJsPlugin(),
-    new CopyWebpackPlugin([{ from: './src/index.html', to: 'index.html' }])
-  ] : [],
-}
+  devServer: {
+    setup: function (app) {
+      app.use('/jasmine', express.static('node_modules/jasmine-core/lib/jasmine-core/'));
+    }
+  }
+};
 
-module.exports = config
+module.exports = config;

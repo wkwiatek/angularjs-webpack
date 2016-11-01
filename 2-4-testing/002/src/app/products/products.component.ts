@@ -1,32 +1,26 @@
-const { listElement } = require('./products.styl') // tslint:disable-line
-import { IComponentOptionsRouter } from '../shared/interfaces/component-options-router.interface'
-import { IProduct } from './product.interface'
+import * as angular from 'angular';
+import IComponentOptions = angular.IComponentOptions;
 
-export const ProductsComponent: IComponentOptionsRouter = {
-  $routeConfig: [{
-    component: 'productsMain',
-    name: 'ProductsMain',
-    path: '/',
-    useAsDefault: true,
-  }, {
-    component: 'productsAdd',
-    name: 'ProductsAdd',
-    path: '/add',
-  }],
-  controller: class {
-    public products: IProduct[]
+import {IProduct} from './product.interface';
 
-    constructor(Products: any) {
-      'ngInject';
+import './products.styl' // tslint:disable-line
 
-      this.products = Products.products
-    }
-  },
-  template: `
+
+export const ProductsComponent: IComponentOptions = {
+    controller: class {
+        public products: IProduct[];
+
+        constructor(Products: any) {
+            'ngInject';
+
+            this.products = Products.products
+        }
+    },
+    template: `
     <div>
       <h1>Shopping list</h1>
       <ul>
-        <li ng-repeat="product in $ctrl.products" class="${listElement}">
+        <li ng-repeat="product in $ctrl.products" class="listElement">
           {{ product.name }} - {{ product.price | currency }}
         </li>
       </ul>
