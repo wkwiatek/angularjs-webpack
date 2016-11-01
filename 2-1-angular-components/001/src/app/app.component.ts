@@ -6,11 +6,9 @@ import IComponentOptions = angular.IComponentOptions;
 export const AppComponent: IComponentOptions = {
   //10/ Now controller and template are next to each other
   controller: class {
-    public products: IProduct[]
+    public products: IProduct[];
 
     constructor(AppService: any) {
-      'ngInject';
-
       this.products = AppService.products
     }
   },
