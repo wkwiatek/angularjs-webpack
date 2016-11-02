@@ -2,24 +2,25 @@ import IComponentOptions = angular.IComponentOptions
 import { IProduct } from '../product.interface'
 
 export const ProductsAddComponent: IComponentOptions = {
-  //3/ Let's bind a callback
+  //3/ 3. ... using & binding
   bindings: {
     onProductAdded: '&',
   },
   controller: class {
-    public newProduct: IProduct
-    public onProductAdded: Function
+    public newProduct: IProduct;
+    // 4. Remember about proper declaration!
+    public onProductAdded: Function;
 
-    //7/ There we handle form submit
+    //7/ 2. Handling form submit is reduced to notify parent component by...
     public onSubmit(product: IProduct): void {
-      this.onProductAdded(product)
+      this.onProductAdded(product);
       this.newProduct = {
         name: '',
         price: undefined,
       }
     }
   },
-  //19/ Formularza dodawania nowego produktu
+  //7/ 1. This is how our form look like.
   template: `
     <form ng-submit="$ctrl.onSubmit({ newProduct: $ctrl.newProduct })">
       <input ng-model="$ctrl.newProduct.name" placeholder="name" required>

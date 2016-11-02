@@ -35,5 +35,5 @@ node_modules
 # IDE
 .idea
 
-# MAC_OS :/
+# macOS :/
 .DS_Store
