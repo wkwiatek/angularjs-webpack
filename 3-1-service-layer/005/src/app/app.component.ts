@@ -1,15 +1,20 @@
 import * as angular from 'angular';
 
 import IComponentOptions = angular.IComponentOptions;
+import {ProductsService} from "./products.service";
 import {Product} from './Product';
 
 class AppComponentController {
-    constructor (public products: Product[]) {
+    public products: Product[] = [];
+
+    constructor (productsService: ProductsService) {
+        'ngInject';
+        this.products = productsService.getProducts();
     }
 }
 
 export const AppComponent: IComponentOptions = {
-    controller: ['products', AppComponentController],
+    controller: AppComponentController,
     template: `
         <div>
             <h1>Shopping list</h1>
