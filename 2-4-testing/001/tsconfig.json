@@ -6,6 +6,7 @@
 		"module": "commonjs",
 		"sourceMap": true,
 		"noImplicitAny": true,
+		//We need to add these declarations to compile specs properly
 		"types": ["jasmine", "angular-mocks"]
 	},
 	"exclude": [

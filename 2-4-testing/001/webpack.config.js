@@ -1,9 +1,7 @@
 const webpack = require('webpack');
 const express = require('express');
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const isProdEnv = process.env.WEBPACK_ENV === 'production';
 
 const config = {
   devtool: 'source-map',
@@ -28,10 +26,6 @@ const config = {
       { test: /\.styl$/, loaders: ['style', 'css?modules', 'stylus'] },
     ],
   },
-  plugins: isProdEnv ? [
-    new webpack.optimize.UglifyJsPlugin(),
-    new CopyWebpackPlugin([{ from: './src/index.html', to: 'index.html' }])
-  ] : [],
   //5/ And configure jasmine to be served by webpack-dev-server
   devServer: {
     setup: function (app) {
